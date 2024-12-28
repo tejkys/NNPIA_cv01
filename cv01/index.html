@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ondřej Matějka</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ondřej Matějka">
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/324/324830.png">
+    <style>
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        h1 {
+            font-size: 1.4rem;
+            color: white;
+            padding: 1rem;
+            margin: 0px;
+        }
+
+        a {
+            font-size: 1.2rem;
+            padding: 1rem;
+            color: #a0a0a0;
+            font-weight: bold;
+        }
+
+        .header-bar {
+            grid-area: header;
+            padding: 0px !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(0, 0, 0) !important;
+        }
+
+        .header-banner {
+            grid-area: banner;
+            background-image: url('https://media.cntraveler.com/photos/6367ff45429b3d457f71bdac/16:9/w_2580,c_limit/West-Lake-China-GettyImages-1169250112.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 400px;
+        }
+
+        .content {
+            grid-area: main;
+            background-color: rgb(226, 218, 218) !important;
+
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: rgb(0, 0, 0) !important;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header'
+                'banner banner'
+                'main main'
+                'footer footer'
+            ;
+            gap: 0px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(238, 233, 233, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .header-bar .menu {
+            list-style-type: none;
+        }
+
+        .header-bar .menu li {
+            display: inline !important;
+        }
+
+        .box {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 1rem;
+            width: fit-content;
+            background-color: rgb(255, 255, 255) !important;
+            min-width: 50%;
+        }
+
+        .box>p {
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .profile-image>img {
+            height: 125px;
+            width: auto;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        .profile-header1 {
+            background-color: rgb(220, 216, 211);
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 5px;
+            margin: 2px;
+        }
+
+        .profile-header2 {
+            background-color: rgb(30, 29, 28);
+            font-size: 1.1rem;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 5px;
+            margin: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header-bar">
+            <div>
+                <h1>Kachna</h1>
+            </div>
+            <div>
+                <ul class="menu">
+                    <li>
+                        <a href="#background">Background</a>
+                    </li>
+                    <li>
+                        <a href="#goals">Goals</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-banner">
+            <div class="profile">
+                <div class="profile-image"><img src="https://cdn.britannica.com/92/100692-050-5B69B59B/Mallard.jpg"
+                        alt="profile image"></div>
+                <div class="profile-header1">Hello, I'm Treasure.</div>
+                <div class="profile-header2">My home is Salem, Oregon.</div>
+            </div>
+        </div>
+        <div class="content">
+            <div style="display: flex;">
+                <div style="flex-grow: 1; display: flex; justify-content: center; padding: 4rem;">
+                    <div class="box" id="background">
+                        Background
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris tincidunt sem sed arcu.
+                            Aenean placerat. Sed ac dolor sit amet purus malesuada congue. Mauris tincidunt sem sed
+                            arcu. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis
+                            velit mauris vel metus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                            necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                            Praesent id justo in neque elementum ultrices. Nullam justo enim, consectetuer nec,
+                            ullamcorper ac, vestibulum in, elit. Vivamus ac leo pretium faucibus. Nullam dapibus
+                            fermentum ipsum. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+                            saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis
+                            gravida nulla.
+                        </p>
+                        <p>
+                            Cras elementum. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Fusce
+                            consectetuer risus a nunc. Fusce aliquam vestibulum ipsum. Integer in sapien. Nulla
+                            accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla
+                            vel leo. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio,
+                            vitae placerat pede sem sit amet enim. Vestibulum erat nulla, ullamcorper nec, rutrum non,
+                            nonummy ac, erat. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+                            voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Proin
+                            mattis lacinia justo. Suspendisse nisl. Duis bibendum, lectus ut viverra rhoncus, dolor nunc
+                            faucibus libero, eget facilisis enim ipsum id lacus. Duis risus.
+                        </p>
+                    </div>
+                </div>
+                <div style="flex-grow: 1; display: flex; justify-content: center; padding: 4rem;">
+                    <div class="box" id="goals">
+                        Goals
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris tincidunt sem sed arcu.
+                            Aenean placerat. Sed ac dolor sit amet purus malesuada congue. Mauris tincidunt sem sed
+                            arcu. Mauris suscipit, ligula sit amet pharetra semper, nibh ante cursus purus, vel sagittis
+                            velit mauris vel metus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+                            necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
+                            Praesent id justo in neque elementum ultrices. Nullam justo enim, consectetuer nec,
+                            ullamcorper ac, vestibulum in, elit. Vivamus ac leo pretium faucibus. Nullam dapibus
+                            fermentum ipsum. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus
+                            saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Donec iaculis
+                            gravida nulla.
+                        </p>
+                        <p>
+                            Cras elementum. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Fusce
+                            consectetuer risus a nunc. Fusce aliquam vestibulum ipsum. Integer in sapien. Nulla
+                            accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla
+                            vel leo. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio,
+                            vitae placerat pede sem sit amet enim. Vestibulum erat nulla, ullamcorper nec, rutrum non,
+                            nonummy ac, erat. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+                            voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Proin
+                            mattis lacinia justo. Suspendisse nisl. Duis bibendum, lectus ut viverra rhoncus, dolor nunc
+                            faucibus libero, eget facilisis enim ipsum id lacus. Duis risus.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <a href="#">Nejake ty dalsi odkazy</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
